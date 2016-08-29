@@ -1,4 +1,4 @@
-# Rocky Mountain Ruby
+# Try Turing
 
 This is a online website for the "Try Turing" website. The application is built using Rails 5.
 
