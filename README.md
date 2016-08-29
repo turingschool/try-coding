@@ -1,24 +1,25 @@
-# README
+# Rocky Mountain Ruby
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a online website for the "Try Turing" website. The application is built using Rails 5.
 
-Things you may want to cover:
+### Installation
 
-* Ruby version
+Clone the repo using the following command:
 
-* System dependencies
+```
+git clone https://github.com/smonetti/turing-try-turing
+```
 
-* Configuration
+Install the gems by running:
 
-* Database creation
+```
+bundle install
+```
 
-* Database initialization
+Launch the app by running:
 
-* How to run the test suite
+```
+rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Visit the site at http://localhost:3000/
