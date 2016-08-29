@@ -1,0 +1,10 @@
+%h1
+  Hello
+%a{href: "#", class: 'btn btn-primary btn-lg'}
+  Hello World
+
+%ul
+- @events.each do |event|
+  %li
+    %h3= event['name']['text']
+    %p= event['description']['text']
