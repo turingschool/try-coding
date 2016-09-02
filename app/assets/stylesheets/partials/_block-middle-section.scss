@@ -1,0 +1,33 @@
+.block-middle-section {
+    margin: 50px 0 90px;
+
+    .box {
+        border: 1px solid #ebecec;
+        padding: 30px;
+        text-align: center;
+        border-radius: 3px;
+
+        h4 {
+            margin-bottom: 30px;
+        }
+        @media #{$sm}, #{$xs} {
+            margin-bottom: 15px;
+        }
+        @media #{$sm} {
+            text-align: left;
+
+            img {
+                float: left;
+            }
+
+            h4,
+            p {
+                padding-left: 100px;
+            }
+
+            h4 {
+                margin-top: 0;
+            }
+        }
+    }
+}

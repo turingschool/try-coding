@@ -1,0 +1,19 @@
+footer {
+    background-color: $gray-dark;
+    font-size: $font-size-small;
+    padding: 5px 0;
+    @media #{$lg} {
+        padding: 0;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    &,
+    a,
+    a:active,
+    a:focus,
+    a:hover,
+    a:visited {
+        color: #A2A2A2;
+    }
+}

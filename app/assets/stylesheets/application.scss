@@ -10,7 +10,21 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require font-awesome
  */
-@import "bootstrap_theme.css"
+@import "bootstrap_theme.css";
+@import "partials/variables";
+@import "partials/button";
+@import "partials/form";
+@import "partials/header";
+@import "partials/event";
+@import "partials/block-upcoming-event";
+@import "partials/block-upcoming-events";
+@import "partials/block-try-turing-explained";
+@import "partials/block-middle-section";
+@import "partials/block-what-you-learn";
+@import "partials/block-perks";
+@import "partials/block-testimonials";
+@import "partials/block-contact";
+@import "partials/footer";

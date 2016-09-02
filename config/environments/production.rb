@@ -83,4 +83,28 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Heroku Cache Settings
+  config.cache_store = :dalli_store,
+                    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                    {:username => ENV["MEMCACHIER_USERNAME"],
+                     :password => ENV["MEMCACHIER_PASSWORD"],
+                     :failover => true,
+                     :socket_timeout => 1.5,
+                     :socket_failure_delay => 0.2,
+                     :down_retry_delay => 60,
+                     :pool_size => 5
+                    }
+
+  # Action Mailer
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => 'smtp.sendgrid.net',
+    :port                 => 587,
+    :domain               => 'turing.io', # change me
+    :user_name            => 'turing',
+    :password             => ENV['SENDGRID_PASSWORD'],
+    :authentication       => 'plain',
+    :enable_starttls_auto => true
+  }
 end

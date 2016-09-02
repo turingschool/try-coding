@@ -1,0 +1,20 @@
+.block-upcoming-event {
+    margin-top: -230px;
+    position: relative;
+    z-index: 2;
+    @media #{$sm} {
+        margin-top: -70px;
+    }
+    @media #{$xs} {
+        margin-top: -20px;
+    }
+
+    .gear-top {
+        background: transparent asset-url('horizontal-gear.png') bottom center no-repeat;
+        background-size: 33px 106px;
+        height: 106px;
+        @media #{$sm}, #{$xs} {
+            display: none;
+        }
+    }
+}

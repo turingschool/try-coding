@@ -1,0 +1,29 @@
+.block-contact {
+    margin-top: 50px;
+    margin-bottom: 60px;
+
+    .block-content {
+        .block-title {
+            background: transparent asset-url('icon-workstation') bottom right no-repeat;
+            background-size: 70px 70px;
+            border-bottom: 2px solid $brand-primary;
+            padding-bottom: 30px;
+            min-height: 73px;
+        }
+        @media #{$lg} {
+            padding: 0 100px;
+        }
+
+        form {
+            margin-top: 65px;
+
+            textarea {
+                min-height: 140px;
+            }
+
+            #formResults {
+                margin: 10px 0;
+            }
+        }
+    }
+}

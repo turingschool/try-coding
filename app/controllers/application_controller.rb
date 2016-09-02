@@ -1,22 +1,14 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+    protect_from_forgery with: :exception
 
-  def index
-    @eb = EventbriteAPI.new
-    organizer_id = 1314828823
+    require 'eventbrite'
 
-    # Get a list of events
-    path = "/events/search?token=#{EventbriteAPI::Configuration.access_token}"
-    @eb_events = EventbriteAPI::Request.new(path, {'organizer.id': organizer_id})
+    def index
+      @events = Event.all
+    end
 
-    @events = @eb_events.get
-
-    @events = @events.body['events']
-
-    # @events.each do |event|
-    #   eb_event = @eb.events(id: event['id'])
-    #   event = eb_event.attendees.get
-    #   pp event.body
-    # end
+    def contact
+    ContactMailer.form_request(params[:name], params[:reason], params[:message]).deliver_now
+    render text: 'Message sent successfully. Thank you.', status: 200
   end
 end

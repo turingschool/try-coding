@@ -1,0 +1,12 @@
+common: &common
+  eventbrite:
+    token: '6TASZ5DCJBCIHSSTZTEQ'
+    
+development:
+  <<: *common
+
+test:
+  <<: *common
+
+production:
+  <<: *common

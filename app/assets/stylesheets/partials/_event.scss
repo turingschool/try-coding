@@ -1,0 +1,150 @@
+.event {
+    @media #{$lg} {
+        margin: 0 100px 30px;
+    }
+    margin-bottom: 30px;
+
+    &-box {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 4px rgba(0,0,0,0.42);
+
+        .event-date {
+            height: 100%;
+            padding: 30px 40px 18px;
+            border-right: 1px solid rgba(0,0,0,0.14);
+            @media #{$sm} {
+                padding: 30px 15px;
+            }
+
+            .event-label {
+                text-transform: uppercase;
+                color: $brand-primary;
+                font-size: $font-size-small;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .event-day {
+                font: {
+                    size: 64px;
+                    weight: 100;
+                }
+                -webkit-font-smoothing: antialiased;
+                text-align: center;
+                color: $gray-dark;
+                line-height: 1.1em;
+            }
+
+            .event-month {
+                color: $gray-dark;
+                font-weight: bold;
+                font-size: $font-size-small;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 35px;
+            }
+
+            .event-date-time {
+                font: {
+                    size: 30px;
+                    weight: 100;
+                }
+                text-align: center;
+                color: $gray-dark;
+                line-height: 1.1em;
+                margin-bottom: 25px;
+            }
+
+            .event-button {
+                text-align: center;
+
+                .btn {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .event-info {
+            padding: 30px 18px 22px 0;
+            @media #{$xs} {
+                padding: 15px;
+            }
+
+            .event-title {
+                h3 {
+                    margin-top: 0;
+                    @media #{$xs} {
+                        text-align: center;
+                    }
+
+                    .event-time {
+                        float: right;
+                        font-weight: normal;
+                    }
+                }
+            }
+
+            .event-description {
+                padding-bottom: 8px;
+                border-bottom: 1px solid rgba(0,0,0,0.08);
+                margin-bottom: 8px;
+                margin-right: 50px;
+                padding-right: 50px;
+                @media #{$sm}, #{$xs} {
+                    margin-right: 0;
+                    padding-right: 0;
+                }
+            }
+
+            .event-address {
+                margin-bottom: 8px;
+
+                a,
+                a:focus,
+                a:visited,
+                a:visited {
+                    background: transparent asset-url('icon-map-marker.png') center left no-repeat;
+                    background-size: 14px 20px;
+                    color: $text-color;
+                    padding-left: 20px;
+                }
+
+                a:hover {
+                    color: $brand-primary;
+                    text-decoration: underline;
+                }
+            }
+
+            .event-attendees {
+                padding-left: 20px;
+
+                img,
+                span.remaining {
+                    display: inline-block;
+                    width: 34px;
+                    height: 34px;
+                    line-height: 34px;
+                    border-radius: 100%;
+                    background-color: $gray-dark;
+                    color: white;
+                    text-align: center;
+                    vertical-align: top;
+                }
+
+                img {
+                    margin-right: 15px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                .no-attendee {
+                    font-size: $font-size-small;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

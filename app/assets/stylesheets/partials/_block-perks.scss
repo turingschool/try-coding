@@ -1,0 +1,22 @@
+.block-perks {
+    background: $brand-primary;
+    text-align: center;
+    margin: 40px 0;
+
+    .block-content {
+        padding: 85px 250px;
+        @media #{$xs} {
+            padding: 40px 0;
+        }
+        @media #{$sm} {
+            padding: 60px 30px;
+        }
+        @media #{$md} {
+            padding: 70px 150px;
+        }
+
+        .btn {
+            margin-top: 25px;
+        }
+    }
+}

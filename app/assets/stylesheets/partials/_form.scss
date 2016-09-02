@@ -1,0 +1,24 @@
+.form-control {
+    border-color: $text-color;
+
+    &.error {
+        border-color: $brand-danger;
+    }
+}
+
+label.error {
+    color: $brand-danger;
+    font-style: italic;
+    font-size: $font-size-small;
+    font-weight: normal;
+}
+
+select.form-control {
+    background: transparent asset-url('icon-dropdown.png') center right 15px no-repeat;
+    background-size: 17px 11px;
+    padding-right: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-style: italic;
+}

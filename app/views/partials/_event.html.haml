@@ -1,0 +1,48 @@
+- attendees_to_show = 7
+- remaining_attendees = event['attendees'].size - attendees_to_show
+
+.event
+  .event-box
+    .row
+      .col-sm-3.match-height{'data-mh': 'event-column'}
+        .event-date
+          .event-label
+            = label
+          .event-day.hidden-xs
+            = event_day(event)
+          .event-month.hidden-xs
+            = event_month(event)
+          .event-date-time.visible-xs
+            = event_month(event)
+            = event_day(event)
+            @
+            = event_time(event)
+
+          .event-button
+            %a{href: event['url'], class: 'btn btn-primary'} Join Event
+      .col-sm-9.match-height{'data-mh': 'event-column'}
+        .event-info
+          .event-title
+            %h3
+              = event['name']['text']
+              %span.event-time.hidden-xs
+                = event_time(event)
+          .event-description
+            %p
+              = event_description(event)
+              %a{href: event['url']} Learn More
+          .event-address
+            %a{href: venue_google_maps_url(event['venue']), target: '_blank'}
+              = event['venue']['address']['localized_address_display']
+
+          .event-attendees
+            - if event['attendees'].size > 0
+              - event['attendees'][0, attendees_to_show].each do |attendee|
+                = gravatar_image_tag(attendee['profile']['email'], alt: attendee['profile']['first_name'])
+
+              - if (remaining_attendees > 0)
+                %span.remaining
+                  = "+" + remaining_attendees.to_s
+            - else
+              %p.text-muted.no-attendee
+                No one attending yet, be the first!

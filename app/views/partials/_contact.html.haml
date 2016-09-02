@@ -1,0 +1,24 @@
+.block-contact
+  .container
+    .block-content
+      %h2.block-title Contact Us
+      %p Whant to host an event, or have a specific question? Contact us with the form below.
+      = form_tag "/contact", autocomplete: "off" do
+        = invisible_captcha :topic
+        .row
+          .col-sm-6
+            .form-group
+              = label_tag 'name', 'Your Name *'
+              = text_field_tag "name", nil, placeholder: 'John Doe', required: true, class: 'form-control', minlength: 2
+          .col-sm-6
+            .form-group
+              = label_tag 'reason', 'Reason For Iniqury *'
+              = select_tag 'reason', options_for_select([["- Select a reason -",""], ["Host a Try Turing event","Host a Try Turing event"], ["Ask a question","Ask a question"], ["Other", "Other"]], ""), required: true, class: 'form-control'
+
+        .form-group
+          = label_tag 'message', 'Your Message *'
+          = text_area_tag 'message', nil, placeholder: 'Tell us more about your question', required: true, class: 'form-control'
+        .form-group.form-group-form-actions.text-right
+          #formResults.text-success           
+          .btn-form-submit
+            = submit_tag "Send Message", class: 'btn btn-primary btn-lg btn-submit', 'data-loading-text' => "Sending..."

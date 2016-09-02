@@ -1,0 +1,60 @@
+header {
+    background: transparent asset-url('banner-bg.jpg') center center no-repeat;
+    background-size: cover;
+    padding-top: 300px;
+    padding-bottom: 270px;
+    position: relative;
+    @media #{$sm} {
+        padding-top: 200px;
+        padding-bottom: 150px;
+    }
+    @media #{$xs} {
+        padding-top: 150px;
+        padding-bottom: 50px;
+    }
+
+    .block-logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+
+        a,
+        a:active,
+        a:focus,
+        a:visited {
+            display: inline-block;
+        }
+        @media #{$xs} {
+            left: 15px;
+            top: 15px;
+
+            img {
+                width: 140px;
+                height: 40px;
+            }
+        }
+    }
+
+    .block-banner {
+        h1 {
+            font-size: 48px;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;
+            @media #{$xs} {
+                font-size: 36px;
+            }
+        }
+
+        h2 {
+            font-weight: 100;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+            letter-spacing: 2px;
+            @media #{$xs} {
+                font-size: 20px;
+                -webkit-font-smoothing: auto;
+            }
+        }
+    }
+}

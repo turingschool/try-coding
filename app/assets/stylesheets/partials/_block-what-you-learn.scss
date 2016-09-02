@@ -1,0 +1,29 @@
+.block-what-you-learn {
+    h1 {
+        margin-bottom: 60px;
+    }
+
+    .row {
+        margin-bottom: 56px;
+
+        h3 {
+            margin-top: 5px;
+            @media #{$xs} {
+                margin-top: 15px;
+            }
+        }
+
+        img.img-responsive {
+            @media #{$xs} {
+                width: 100%;
+            }
+        }
+
+        .list-inline {
+            li {
+                vertical-align: top;
+                padding-right: 15px;
+            }
+        }
+    }
+}
