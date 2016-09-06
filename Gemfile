@@ -37,6 +37,7 @@ gem 'dalli'
 gem 'connection_pool'
 gem 'invisible_captcha'
 gem 'sendgrid'
+gem 'figaro'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
