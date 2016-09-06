@@ -57,7 +57,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address              => 'smtp.sendgrid.net',
     :port                 => 587,
-    :domain               => 'turing.io', # change me
+    :domain               => 'turing.io',
     :user_name            => 'turing',
     :password             => ENV['SENDGRID_PASSWORD'],
     :authentication       => 'plain',

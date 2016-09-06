@@ -1,5 +1,8 @@
 .block-middle-section {
     margin: 50px 0 90px;
+    @media #{$xs} {
+        margin-bottom: 25px;
+    }
 
     .box {
         border: 1px solid #ebecec;

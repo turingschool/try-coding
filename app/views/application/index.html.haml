@@ -1,6 +1,6 @@
 %header
   .block-logo
-    %a{href: 'https://www.turing.io/', target: "_blank"}
+    %a{href: 'https://www.turing.io', target: "_blank"}
       = image_tag("logo.png", size: "280x80", alt: "Turing Logo")
 
   .container.block-banner.text-center
@@ -93,7 +93,7 @@
 
   .block-upcoming-events
     .container
-      %h1.text-center Upcoming Events
+      %h1#all-events.text-center Upcoming Events
       - @events.each do |event|
         = render partial: 'partials/event', locals: {event: event, label: 'UPCOMING'}
 

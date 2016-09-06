@@ -1,16 +1,79 @@
 .form-control {
     border-color: $text-color;
-
-    &.error {
-        border-color: $brand-danger;
-    }
 }
 
-label.error {
-    color: $brand-danger;
-    font-style: italic;
-    font-size: $font-size-small;
-    font-weight: normal;
+.form-group {
+    .form-control-feedback {
+        display: none;
+        position: absolute;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border: 1px solid $text-color;
+
+        &::before {
+            font-size: 20px;
+            position: relative;
+            top: 11px;
+        }
+    }
+
+    &.has-feedback textarea~.form-control-feedback {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 3px;
+    }
+
+    &.has-error {
+        label {
+            color: $brand-danger;
+        }
+
+        .form-control {
+            border-color: $brand-danger;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .form-control-feedback {
+            display: block;
+            background-color: #F9D3CF;
+            border-color: $brand-danger;
+
+            &::before {
+                content: '\f06a';
+                color: $brand-danger;
+            }
+        }
+    }
+
+    &.has-success {
+        label {
+            color: $brand-success;
+        }
+
+        .form-control {
+            border-color: $brand-success;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .form-control-feedback {
+            display: block;
+            background-color: #CBF3DC;
+            border-color: $brand-success;
+
+            &::before {
+                content: '\f058';
+                color: $brand-success;
+            }
+        }
+    }
+
+    .fa-check-circle {
+        margin-left: 22px;
+        font-size: 22px;
+        top: 2px;
+        position: relative;
+    }
 }
 
 select.form-control {

@@ -1,4 +1,6 @@
 .btn {
+    transition: all 0.3s ease-in-out;
+
     .fa.fa-arrow-right::before {
         -webkit-mask: asset-url('turing-arrow-right.svg') no-repeat 50% 50%;
         mask: asset-url('turing-arrow-right.svg') no-repeat 50% 50%;

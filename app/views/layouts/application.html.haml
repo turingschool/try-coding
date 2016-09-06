@@ -2,11 +2,21 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{content: "width=device-width,initial-scale=1.0", name: "viewport"}
+    -# TODO: Fill and uncomment og meta tags
+    -# %meta{content: "[FILLE ME IN]", property: "og:url"}
+    -# %meta{content: "[FILLE ME IN]", property: "og:title"}
+    -# %meta{content: "[FILLE ME IN]", property: "og:description"}
+    -# %meta{content: "[FILLE ME IN]", property: "og:site_name"}
+    -# %meta{content: "[FILLE ME IN]", property: "og:image"}
+    -# %meta{content: "[FILLE ME IN]", property: "og:image:width"}
+    -# %meta{content: "[FILLE ME IN]", property: "og:image:height"}
+
     %title Try Turing | Turing School of Software & Design
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js'
-    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js'
+    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js'
     = csrf_meta_tags
     %script{ type: 'text/javascript', src: '//use.typekit.net/lqc0crg.js' }
     %script{ type: 'text/javascript' } try{Typekit.load();}catch(e){}
