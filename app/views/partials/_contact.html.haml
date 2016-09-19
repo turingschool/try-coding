@@ -2,7 +2,7 @@
   .container
     .block-content
       %h2.block-title Contact Us
-      %p Whant to host an event, or have a specific question? Contact us with the form below.
+      %p Want to host an event, or have a specific question? Contact us with the form below.
       = form_tag "/contact", autocomplete: "off", class: 'form-validate', 'data-toggle': "validator" do
         = invisible_captcha :topic
         .row
@@ -18,7 +18,7 @@
               %span{class: "fa form-control-feedback", 'aria-hidden': true}
         .form-group.has-feedback
           = label_tag 'message', 'Your Message *'
-          = text_area_tag 'message', nil, placeholder: 'Tell us more about your question', required: true, class: 'form-control'
+          = text_area_tag 'message', nil, placeholder: 'Tell us more about your question.', required: true, class: 'form-control'
           %span{class: "fa form-control-feedback", 'aria-hidden': true}
         .form-group.form-group-form-actions.text-right
           #formResults.text-success
