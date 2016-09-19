@@ -1,5 +1,4 @@
 module EventHelper
-
   def venue_google_maps_url(venue)
     'https://maps.google.com/?q=' + URI::encode(venue['name'] + ' ' + venue['address']['localized_address_display'])
   end
@@ -21,8 +20,8 @@ module EventHelper
   end
 
   private
-  def event_start_time(event)
-    Time.parse(event['start']['utc'])
-  end
 
+  def event_start_time(event)
+    Time.parse(event['start']['local'])
+  end
 end
