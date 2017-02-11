@@ -32,8 +32,9 @@
               = event_description(event)
               %a{href: event['url']} Learn More
           .event-address
-            %a{href: venue_google_maps_url(event['venue']), target: '_blank'}
-              = event['venue']['address']['localized_address_display']
+            - if event['venue']
+              %a{href: venue_google_maps_url(event['venue']), target: '_blank'}
+                = event['venue']['address']['localized_address_display']
 
           .event-attendees
             - if event['attendees'].size > 0

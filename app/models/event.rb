@@ -17,7 +17,7 @@ class Event
       # Get event attendees and venue
       events.each do |event|
           event['attendees'] = Eventbrite::Attendee.all(event_id: event['id'], status: 'attending').attendees
-          event['venue'] = Eventbrite::Venue.retrieve(event['venue_id'])
+          event['venue'] = Eventbrite::Venue.retrieve(event['venue_id']) if event['venue']
       end
 
       # Convert to JSON so we can store it in cache
