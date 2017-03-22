@@ -93,7 +93,7 @@
 
   .block-upcoming-events
     .container
-      %h1#all-events.text-center Upcoming Events
+      %h1#all-events.text-center Upcoming Sessions
       - @events.each do |event|
         = render partial: 'partials/event', locals: {event: event, label: 'UPCOMING'}
 

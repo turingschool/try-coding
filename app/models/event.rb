@@ -12,7 +12,11 @@ class Event
         user_id: 'me',
         order_by: 'start_asc',
         status: 'live'
-      }).events.reject { |event| event[:status] == 'started' }
+      }).events
+
+      events = events.reject do |event|
+        event.status == 'started' || event.name.text.include?('Speaker Series')
+      end
 
       # Get event attendees and venue
       events.each do |event|
