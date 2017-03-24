@@ -14,8 +14,9 @@ class Event
         status: 'live'
       }).events
 
-      events = events.reject do |event|
-        event.status == 'started' || event.name.text.include?('Speaker Series')
+      events = events.select do |event|
+        event.status != 'started' &&
+        (event.name.text.include?('Try Coding') || event.name.text.include?('Turing Second Shift'))
       end
 
       # Get event attendees and venue
