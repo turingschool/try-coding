@@ -6,12 +6,17 @@
       = form_tag "/contact", autocomplete: "off", class: 'form-validate', 'data-toggle': "validator" do
         = invisible_captcha :topic
         .row
-          .col-sm-6
+          .col-sm-4
             .form-group.has-feedback
               = label_tag 'name', 'Your Name *'
               = text_field_tag "name", nil, placeholder: 'John Doe', required: true, class: 'form-control', minlength: 2
               %span{class: "fa form-control-feedback", 'aria-hidden': true}
-          .col-sm-6
+          .col-sm-4
+            .form-group.has-feedback
+              = label_tag 'name', 'Your Email *'
+              = text_field_tag "email", nil, placeholder: 'john@example.com', required: true, class: 'form-control', minlength: 2
+              %span{class: "fa form-control-feedback", 'aria-hidden': true}
+          .col-sm-4
             .form-group.has-feedback
               = label_tag 'reason', 'Reason For Inquiry *'
               = select_tag 'reason', options_for_select([["- Select a reason -",""], ["Host a Try Turing event","Host a Try Turing event"], ["Ask a question","Ask a question"], ["Other", "Other"]], ""), required: true, class: 'form-control'

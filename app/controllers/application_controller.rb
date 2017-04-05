@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def contact
-    ContactMailer.form_request(params[:name], params[:reason], params[:message]).deliver_now
+    ContactMailer.form_request(params[:name], params[:email], params[:reason], params[:message]).deliver_now
     head :ok
   end
 end

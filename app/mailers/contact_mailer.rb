@@ -1,11 +1,12 @@
 class ContactMailer < ApplicationMailer
 	include SendGrid
 
-	def form_request(name, reason, message)
+	def form_request(name, email, reason, message)
 		@name    = name
+    @email   = email
 		@reason  = reason
 		@message = message
 
-		mail(to: 'contact@turing.io', subject: 'Try Turing Contact Request')
+		mail(from: "\"#{@name}\" <#{@email}>", to: 'contact@turing.io', subject: 'Try Turing Contact Request')
 	end
 end
