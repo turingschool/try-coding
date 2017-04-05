@@ -3,7 +3,7 @@ class Event
   # events for the user authenticated, grabs the attendees
   # and the venue, and then caches to entire array.
   def self.all
-    Eventbrite.token = ENV['eventbrite']
+    Eventbrite.token = ENV['EVENTBRITE']
 
     # Cache block
     events_json_cache = Rails.cache.fetch('events', expires_in: 1.hour) do
