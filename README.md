@@ -28,3 +28,7 @@ rails s
 ```
 
 Visit the site at http://localhost:3000/
+
+### Analytics
+We use Google Analytics. The tracking code will load if the env var
+`GOOGLE_ANALYTICS_ENABLED` is present.
