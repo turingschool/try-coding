@@ -21,5 +21,8 @@
     %script{ type: 'text/javascript' } try{Typekit.load();}catch(e){}
 
     = render 'layouts/facebook'
+
+    - if ENV.fetch('GOOGLE_ANALYTICS_ENABLED', nil).present?
+      = render 'partials/analytics'
   %body
     = yield
