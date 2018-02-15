@@ -24,6 +24,11 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'awesome_print'
   gem 'rb-readline'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara'
 end
 
 group :production do
