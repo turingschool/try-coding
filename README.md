@@ -27,6 +27,14 @@ Launch the app by running:
 rails s
 ```
 
+### Tests
+
+Run the specs with
+
+```
+rspec
+```
+
 Visit the site at http://localhost:3000/
 
 ### Analytics
