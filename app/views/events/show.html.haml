@@ -1,0 +1,17 @@
+%header
+  .block-logo
+    %a{href: 'https://www.turing.io', target: "_blank"}
+      = image_tag("logo.png", size: "280x80", alt: "Turing Logo")
+
+  .container.block-banner.text-center
+    %h1 Try Coding
+    %h2 Learn the basics of programming
+%main
+  .block-upcoming-event
+    .container
+      .gear-top
+      = render partial: 'partials/event', locals: {event: @event, label: 'EVENT'}
+  .block-try-turing-explained
+    .container
+      %h3.text-center
+        <em>Try Coding</em> is an initiative from the <a href='http://turing.io' target='_blank'>Turing School</a> that will expose you to the basics of programming. We'll introduce you to programming fundamentals for building web applications, and to the basics of HTML, CSS and JavaScript.
