@@ -31,4 +31,14 @@ class Event
 
     JSON.parse(events_json_cache)
   end
+
+  def self.by_id(id:)
+    found_event = self.all.find { |event| event['id'] == id }
+
+    if !found_event
+      raise ActiveRecord::RecordNotFound
+    end
+
+    found_event
+  end
 end

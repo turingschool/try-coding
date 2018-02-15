@@ -21,8 +21,9 @@ gem 'sendgrid'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
-  gem 'byebug', platform: :mri
   gem 'awesome_print'
+  gem 'byebug', platform: :mri
+  gem 'pry'
   gem 'rb-readline'
   gem 'rspec-rails'
 end
