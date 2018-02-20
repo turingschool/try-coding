@@ -9,9 +9,10 @@ class Event
     events_json_cache = Rails.cache.fetch('events', expires_in: 1.hour) do
       # Get all Turing events
       events = Eventbrite::User.owned_events({
-        user_id: 'me',
+        expand: 'venue',
         order_by: 'start_asc',
-        status: 'live'
+        status: 'live',
+        user_id: 'me'
       }).events
 
       events = events.select do |event|

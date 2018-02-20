@@ -1,6 +1,10 @@
 - attendees_to_show = 7
 - remaining_attendees = event['attendees'].size - attendees_to_show
 
+%script{type: "application/ld+json"}
+  :plain
+    #{StructuredEventSerializer.new(event).to_json}
+
 .event
   .event-box
     .row

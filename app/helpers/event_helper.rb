@@ -1,7 +1,7 @@
 module EventHelper
   def venue_google_maps_url(venue)
     return false if venue.nil?
-    'https://maps.google.com/?q=' + URI::encode(venue['name'] + ' ' + venue['address']['localized_address_display'])
+    'https://maps.google.com/?q=' + URI::encode((venue['name'] || '') + ' ' + venue['address']['localized_address_display'])
   end
 
   def event_description(event)
