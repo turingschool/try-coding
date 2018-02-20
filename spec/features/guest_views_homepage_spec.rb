@@ -13,6 +13,22 @@ describe 'user visiting homepage 'do
         },
         'description' => {
           'text' => 'event description'
+        },
+        'venue' => {
+          'address' => {
+            'address_1' => '123 Street Road',
+            'city' => 'Denver',
+            'postal_code' => '80210',
+            'region' => 'CO',
+            'country' => 'US',
+            'localized_address_display' => 'pretty address display'
+          },
+          'name' => 'venue name'
+        },
+        'logo' => {
+          'original' => {
+            'url' => 'http://linktoimage.turing.com'
+          }
         }
       }]
     )
@@ -39,7 +55,23 @@ describe 'user visiting homepage 'do
         'description' => {
           'text' => 'event description'
         },
-        'url' => url
+        'url' => url,
+        'venue' => {
+          'address' => {
+            'address_1' => '123 Street Road',
+            'city' => 'Denver',
+            'postal_code' => '80210',
+            'region' => 'CO',
+            'country' => 'US',
+            'localized_address_display' => 'pretty address display'
+          },
+          'name' => 'venue name'
+        },
+        'logo' => {
+          'original' => {
+            'url' => 'http://linktoimage.turing.com'
+          }
+        }
       }]
     )
 
