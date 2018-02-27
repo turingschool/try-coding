@@ -22,6 +22,7 @@
     %script{ type: 'text/javascript' } try{Typekit.load();}catch(e){}
 
     = render 'layouts/facebook'
+    = render 'layouts/logrocket'
 
     - if ENV.fetch('GOOGLE_ANALYTICS_ENABLED', nil).present?
       = render 'partials/analytics'
