@@ -23,7 +23,7 @@
             = event_time(event)
 
           .event-button
-            %a{href: event['url'], class: 'btn btn-primary'} Join Event
+            %a{href: event['url'], target: '_blank', class: 'btn btn-primary'} Join Event
       .col-sm-9.match-height{'data-mh': 'event-column'}
         .event-info
           .event-title
@@ -34,7 +34,7 @@
           .event-description
             %p
               = event_description(event)
-              %a{href: event['url']} Learn More
+              %a{href: event['url'], target: '_blank'} Learn More
           .event-address
             - if event['venue']
               %a{href: venue_google_maps_url(event['venue']), target: '_blank'}
