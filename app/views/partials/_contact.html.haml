@@ -14,7 +14,7 @@
           .col-sm-4
             .form-group.has-feedback
               = label_tag 'name', 'Your Email *'
-              = text_field_tag "email", nil, placeholder: 'john@example.com', required: true, class: 'form-control', minlength: 2
+              = email_field_tag "email", nil, placeholder: 'john@example.com', required: true, class: 'form-control', minlength: 2
               %span{class: "fa form-control-feedback", 'aria-hidden': true}
           .col-sm-4
             .form-group.has-feedback
