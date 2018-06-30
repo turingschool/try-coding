@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.5.1'
 
 gem 'bootstrap-sass'
 gem 'connection_pool'
@@ -14,6 +13,7 @@ gem 'honeybadger', '~> 3.1'
 gem 'invisible_captcha'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
+gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.1.6'
 gem 'sass-rails', '~> 5.0'
