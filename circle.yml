@@ -1,3 +1,6 @@
+database:
+  override:
+    - echo 'not database'
 test:
   override:
     - bundle exec rspec
