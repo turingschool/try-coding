@@ -9,7 +9,7 @@ jobs:
        - image: circleci/postgres:10.0-alpine
          environment:
            - POSTGRES_USER=circleci
-           - POSTGRES_DB=try_coding_test
+           - POSTGRES_DB=db/test
 
     working_directory: ~/repo
 
